@@ -71,7 +71,7 @@ function FavoritesPage(): JSX.Element {
 										<div className="favorites__card-info place-card__info">
 											<div className="place-card__price-wrapper">
 												<div className="place-card__price">
-													<b className="place-card__price-value">€180</b>
+													<b className="place-card__price-value">€180</b>{' '}
 													<span className="place-card__price-text">/&nbsp;night</span>
 												</div>
 												<button
@@ -115,7 +115,7 @@ function FavoritesPage(): JSX.Element {
 										<div className="favorites__card-info place-card__info">
 											<div className="place-card__price-wrapper">
 												<div className="place-card__price">
-													<b className="place-card__price-value">€80</b>
+													<b className="place-card__price-value">€80</b>{' '}
 													<span className="place-card__price-text">/&nbsp;night</span>
 												</div>
 												<button
@@ -170,7 +170,7 @@ function FavoritesPage(): JSX.Element {
 										<div className="favorites__card-info place-card__info">
 											<div className="place-card__price-wrapper">
 												<div className="place-card__price">
-													<b className="place-card__price-value">€180</b>
+													<b className="place-card__price-value">€180</b>{' '}
 													<span className="place-card__price-text">/&nbsp;night</span>
 												</div>
 												<button

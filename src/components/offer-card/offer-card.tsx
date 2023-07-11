@@ -15,7 +15,7 @@ function OfferCard(): JSX.Element {
 			<div className="place-card__info">
 				<div className="place-card__price-wrapper">
 					<div className="place-card__price">
-						<b className="place-card__price-value">€132</b>
+						<b className="place-card__price-value">€132</b>{' '}
 						<span className="place-card__price-text">/&nbsp;night</span>
 					</div>
 					<button className="place-card__bookmark-button button" type="button">
