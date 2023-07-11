@@ -6,10 +6,14 @@ import MainPage from "../../pages/main-page";
 // import OfferPage from '../../pages/offer-page';
 // import OfferNotLoggedPage from '../../pages/offer-not-logged-page';
 
-function App(): JSX.Element {
+type AppProps = {
+	numbersOfOffers: number;
+}
+
+function App({numbersOfOffers} : AppProps): JSX.Element {
 	return (
 		<>
-			<MainPage />
+			<MainPage numbersOfOffers={numbersOfOffers}/>
 			{/*<FavoritesPage />*/}
 			{/*<FavoritesEmptyPage />*/}
 			{/*<LoginPage />*/}
