@@ -31,7 +31,7 @@ function MainPage({numbersOfOffers}: MainPageProps): JSX.Element {
 										<div className="header__avatar-wrapper user__avatar-wrapper"></div>
 										<span className="header__user-name user__name">
                   Oliver.conner@gmail.com
-                </span>
+										</span>
 										<span className="header__favorite-count">3</span>
 									</a>
 								</li>
@@ -92,10 +92,10 @@ function MainPage({numbersOfOffers}: MainPageProps): JSX.Element {
 								<span className="places__sorting-caption">Sort by</span>{' '}
 								<span className="places__sorting-type" tabIndex={0}>
               Popular
-              <svg className="places__sorting-arrow" width={7} height={4}>
-                <use xlinkHref="#icon-arrow-select"/>
-              </svg>
-            </span>
+									<svg className="places__sorting-arrow" width={7} height={4}>
+										<use xlinkHref="#icon-arrow-select"/>
+									</svg>
+								</span>
 								<ul className="places__options places__options--custom places__options--opened">
 									<li
 										className="places__option places__option--active"

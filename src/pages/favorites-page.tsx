@@ -24,8 +24,8 @@ function FavoritesPage(): JSX.Element {
 									>
 										<div className="header__avatar-wrapper user__avatar-wrapper"></div>
 										<span className="header__user-name user__name">
-                  		Oliver.conner@gmail.com
-                		</span>
+											Oliver.conner@gmail.com
+										</span>
 										<span className="header__favorite-count">3</span>
 									</a>
 								</li>
@@ -90,7 +90,7 @@ function FavoritesPage(): JSX.Element {
 											</div>
 											<div className="place-card__rating rating">
 												<div className="place-card__stars rating__stars">
-													<span style={{width: "100%"}}/>
+													<span style={{width: '100%'}}/>
 													<span className="visually-hidden">Rating</span>
 												</div>
 											</div>
@@ -134,7 +134,7 @@ function FavoritesPage(): JSX.Element {
 											</div>
 											<div className="place-card__rating rating">
 												<div className="place-card__stars rating__stars">
-													<span style={{width: "80%"}}/>
+													<span style={{width: '80%'}}/>
 													<span className="visually-hidden">Rating</span>
 												</div>
 											</div>
@@ -189,7 +189,7 @@ function FavoritesPage(): JSX.Element {
 											</div>
 											<div className="place-card__rating rating">
 												<div className="place-card__stars rating__stars">
-													<span style={{width: "100%"}}/>
+													<span style={{width: '100%'}}/>
 													<span className="visually-hidden">Rating</span>
 												</div>
 											</div>

@@ -24,8 +24,8 @@ function FavoritesEmptyPage(): JSX.Element {
 									>
 										<div className="header__avatar-wrapper user__avatar-wrapper"></div>
 										<span className="header__user-name user__name">
-                  	Oliver.conner@gmail.com
-                	</span>
+											Oliver.conner@gmail.com
+										</span>
 										<span className="header__favorite-count">0</span>
 									</a>
 								</li>

@@ -1,4 +1,4 @@
-import MainPage from "../../pages/main-page";
+import MainPage from '../../pages/main-page';
 // import FavoritesPage from '../../pages/favorites-page';
 // import FavoritesEmptyPage from '../../pages/favorites-empty-page';
 // import LoginPage from '../../pages/login-page';
