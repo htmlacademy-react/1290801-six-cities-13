@@ -1,0 +1,11 @@
+.wrapper{
+	background-image: none;
+}
+
+.link{
+		color: #3069a6;
+}
+
+.link:hover{
+		color: #0d0d0d;
+}
