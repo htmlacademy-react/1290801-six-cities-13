@@ -1,3 +1,5 @@
+import {Helmet} from 'react-helmet-async';
+
 import OfferCard from '../components/offer-card/offer-card';
 import Header from '../components/header/header';
 
@@ -8,6 +10,9 @@ type MainPageProps = {
 function MainPage({numbersOfOffers}: MainPageProps): JSX.Element {
 	return (
 		<div className="page page--gray page--main">
+			<Helmet>
+				<title>6 cities</title>
+			</Helmet>
 			<Header />
 			<main className="page__main page__main--index">
 				<h1 className="visually-hidden">Cities</h1>

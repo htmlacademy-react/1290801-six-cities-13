@@ -1,8 +1,13 @@
+import {Helmet} from 'react-helmet-async';
+
 import Header from '../components/header/header';
 
 function MainEmptyPage(): JSX.Element {
 	return (
 		<div className="page page--gray page--main">
+			<Helmet>
+				<title>6 cities</title>
+			</Helmet>
 			<Header />
 			<main className="page__main page__main--index page__main--index-empty">
 				<h1 className="visually-hidden">Cities</h1>

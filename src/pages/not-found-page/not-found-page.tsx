@@ -1,13 +1,17 @@
 import {Link} from 'react-router-dom';
+import {Helmet} from 'react-helmet-async';
+import {AppRoute} from '../../consts';
 
 import styles from './not-found-page.module.css';
 import Header from '../../components/header/header';
-import {AppRoute} from '../../consts';
 import Footer from '../../components/footer/footer';
 
 function NotFoundPage(): JSX.Element {
 	return (
 		<div className="page page--favorites-empty">
+			<Helmet>
+				<title>6 cities: page not found</title>
+			</Helmet>
 			<Header/>
 			<main className="page__main page__main--favorites page__main--favorites-empty">
 				<div className="page__favorites-container container">
