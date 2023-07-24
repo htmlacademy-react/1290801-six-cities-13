@@ -2,12 +2,13 @@ import {Helmet} from 'react-helmet-async';
 
 import OfferCard from '../components/offer-card/offer-card';
 import Header from '../components/header/header';
+import {TOfferForList} from '../types/offer-for-list';
 
 type MainPageProps = {
-	numbersOfOffers: number;
+	offers: TOfferForList[];
 }
 
-function MainPage({numbersOfOffers}: MainPageProps): JSX.Element {
+function MainPage({offers}: MainPageProps): JSX.Element {
 	return (
 		<div className="page page--gray page--main">
 			<Helmet>
@@ -56,7 +57,7 @@ function MainPage({numbersOfOffers}: MainPageProps): JSX.Element {
 					<div className="cities__places-container container">
 						<section className="cities__places places">
 							<h2 className="visually-hidden">Places</h2>
-							<b className="places__found">{numbersOfOffers} places to stay in Amsterdam</b>
+							<b className="places__found">{offers.length} places to stay in Amsterdam</b>
 							<form className="places__sorting" action="#" method="get">
 								<span className="places__sorting-caption">Sort by</span>{' '}
 								<span className="places__sorting-type" tabIndex={0}>
@@ -85,11 +86,11 @@ function MainPage({numbersOfOffers}: MainPageProps): JSX.Element {
 							</form>
 							<div className="cities__places-list places__list tabs__content">
 
-								<OfferCard/>
-								<OfferCard/>
-								<OfferCard/>
-								<OfferCard/>
-								<OfferCard/>
+								{
+									offers.map((offer) => {
+										return <OfferCard offer={offer} key={offer.id} />;
+									})
+								}
 
 							</div>
 						</section>

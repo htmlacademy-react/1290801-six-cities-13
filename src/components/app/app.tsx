@@ -8,17 +8,18 @@ import NotFoundPage from '../../pages/not-found-page/not-found-page';
 import OfferPage from '../../pages/offer-page';
 import PrivateRoute from '../private-route/private-route';
 import FavoritesPage from '../../pages/favorites-page';
+import {TOfferForList} from '../../types/offer-for-list';
 
 type AppProps = {
-	numbersOfOffers: number;
+	offers: TOfferForList[];
 }
 
-function App({numbersOfOffers}: AppProps): JSX.Element {
+function App({offers}: AppProps): JSX.Element {
 	return (
 		<HelmetProvider>
 			<BrowserRouter>
 				<Routes>
-					<Route path={AppRoute.Main} element={<MainPage numbersOfOffers={numbersOfOffers}/>}/>
+					<Route path={AppRoute.Main} element={<MainPage offers={offers}/>}/>
 					<Route path={AppRoute.Login} element={<LoginPage/>}/>
 					<Route
 						path={AppRoute.Favorites}

@@ -1,4 +1,11 @@
-function OfferCard(): JSX.Element {
+import {TOfferForList} from '../../types/offer-for-list';
+
+type OfferCardProps = {
+	offer: TOfferForList;
+}
+
+function OfferCard({offer}: OfferCardProps): JSX.Element {
+	const {id, title, type, price, city, location, isFavorite, isPremium, rating, previewImage} = offer;
 	return (
 		<article className="cities__card place-card">
 			<div className="cities__image-wrapper place-card__image-wrapper">

@@ -1,7 +1,6 @@
 import {TOffer} from '../types/offer';
 
-
-export const offers: TOffer[] = [
+export const offersMock: TOffer[] = [
 	{
 		'id': '7ff5cd35-c50f-4a7a-ad76-abf86d8a5b9d',
 		'title': 'The Joshua Tree House',
