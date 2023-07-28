@@ -183,12 +183,12 @@ export const offersMock: TOffer[] = [
 			'Air conditioning'
 		],
 		'host': {
-			'isPro': true,
+			'isPro': false,
 			'name': 'Angelina',
 			'avatarUrl': 'https://13.design.pages.academy/static/host/avatar-angelina.jpg'
 		},
 		'isPremium': true,
-		'isFavorite': false,
+		'isFavorite': true,
 		'rating': 1,
 		'bedrooms': 5,
 		'maxAdults': 7

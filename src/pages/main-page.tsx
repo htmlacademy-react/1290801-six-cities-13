@@ -87,9 +87,7 @@ function MainPage({offers}: MainPageProps): JSX.Element {
 							<div className="cities__places-list places__list tabs__content">
 
 								{
-									offers.map((offer) => {
-										return <OfferCard offer={offer} key={offer.id} />;
-									})
+									offers.map((offer) => <OfferCard offer={offer} key={offer.id} />)
 								}
 
 							</div>
