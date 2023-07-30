@@ -20,6 +20,7 @@ function App({offers}: AppProps): JSX.Element {
 			<BrowserRouter>
 				<Routes>
 					<Route path={AppRoute.Main} element={<MainPage offers={offers}/>}/>
+					<Route path={`${AppRoute.Main}/:urlCity`} element={<MainPage offers={offers}/>} />
 					<Route path={AppRoute.Login} element={<LoginPage/>}/>
 					<Route
 						path={AppRoute.Favorites}

@@ -5,12 +5,14 @@ import {AppRoute} from '../../consts';
 
 type OfferCardProps = {
 	offer: TOfferForList;
+	onMouseEnter:(offer) => void;
+	onMouseLeave:() => void;
 }
 
-function OfferCard({offer}: OfferCardProps): JSX.Element {
+function OfferCard({offer, onMouseEnter, onMouseLeave}: OfferCardProps): JSX.Element {
 	const {id, title, type, price, city, location, isFavorite, isPremium, rating, previewImage} = offer;
 	return (
-		<article className="cities__card place-card">
+		<article className="cities__card place-card" onMouseEnter={() => (onMouseEnter(offer))} onMouseLeave={onMouseLeave}>
 			<div className="cities__image-wrapper place-card__image-wrapper">
 				{isPremium && (
 					<div className="place-card__mark">
