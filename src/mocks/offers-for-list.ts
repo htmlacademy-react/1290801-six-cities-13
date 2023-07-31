@@ -20,7 +20,7 @@ export const offersForListMock: TOfferForList[] = [
 			'longitude': 2.342499,
 			'zoom': 16
 		},
-		'isFavorite': false,
+		'isFavorite': true,
 		'isPremium': false,
 		'rating': 5
 	},
@@ -66,7 +66,7 @@ export const offersForListMock: TOfferForList[] = [
 			'longitude': 2.335499,
 			'zoom': 16
 		},
-		'isFavorite': false,
+		'isFavorite': true,
 		'isPremium': true,
 		'rating': 2.5
 	},
@@ -250,7 +250,7 @@ export const offersForListMock: TOfferForList[] = [
 			'longitude': 9.976654000000002,
 			'zoom': 16
 		},
-		'isFavorite': false,
+		'isFavorite': true,
 		'isPremium': true,
 		'rating': 2.2
 	},
@@ -273,7 +273,7 @@ export const offersForListMock: TOfferForList[] = [
 			'longitude': 6.798314,
 			'zoom': 16
 		},
-		'isFavorite': false,
+		'isFavorite': true,
 		'isPremium': false,
 		'rating': 4.4
 	}
