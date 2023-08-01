@@ -3,13 +3,16 @@ import FavoriteButtonSmall from '../favorite-button/favorite-button-small';
 import {Link} from 'react-router-dom';
 import {AppRoute} from '../../consts';
 
-type OfferCardProps = {
+type FavoritesOfferCardProps = {
 	offer: TOfferForList;
-	onMouseEnter:(offer) => void;
-	onMouseLeave:() => void;
 }
 
-function OfferCard({offer, onMouseEnter, onMouseLeave}: OfferCardProps): JSX.Element {
+////конечно, эта карточка невероятно сильно похожа на offer-card
+////думаю, что может иметь смысл их объединить и передавать просто тип, чтобы понимать
+////какие стили присваивать и размеры картинок
+////из отличий вижу события по маусоверу, но из можно сделать необязательными
+
+function FavoritesOfferCard({offer}: FavoritesOfferCardProps): JSX.Element {
 	const {
 		id,
 		title,
@@ -23,23 +26,23 @@ function OfferCard({offer, onMouseEnter, onMouseLeave}: OfferCardProps): JSX.Ele
 		previewImage
 	} = offer;
 	return (
-		<article className="cities__card place-card" onMouseEnter={() => (onMouseEnter(offer))} onMouseLeave={onMouseLeave}>
-			<div className="cities__image-wrapper place-card__image-wrapper">
-				{isPremium && (
-					<div className="place-card__mark">
-						<span>Premium</span>
-					</div>)}
+		<article className="favorites__card place-card">
+			{isPremium && (
+				<div className="place-card__mark">
+					<span>Premium</span>
+				</div>)}
+			<div className="favorites__image-wrapper place-card__image-wrapper">
 				<Link to={`${AppRoute.Offer}/${id}`}>
 					<img
 						className="place-card__image"
 						src={previewImage}
-						width={260}
-						height={200}
+						width={150}
+						height={110}
 						alt="Place image"
 					/>
 				</Link>
 			</div>
-			<div className="place-card__info">
+			<div className="favorites__card-info place-card__info">
 				<div className="place-card__price-wrapper">
 					<div className="place-card__price">
 						<b className="place-card__price-value">€{price}</b>{' '}
@@ -62,4 +65,4 @@ function OfferCard({offer, onMouseEnter, onMouseLeave}: OfferCardProps): JSX.Ele
 	);
 }
 
-export default OfferCard;
+export default FavoritesOfferCard;

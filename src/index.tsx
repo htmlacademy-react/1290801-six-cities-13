@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/app/app';
 
-import {NUMBERS_OF_OFFERS} from './consts';
+import {offersForListMock} from './mocks/offers-for-list';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -11,6 +11,6 @@ const root = ReactDOM.createRoot(
 
 root.render(
 	<React.StrictMode>
-		<App numbersOfOffers={NUMBERS_OF_OFFERS}/>
+		<App offers={offersForListMock}/>
 	</React.StrictMode>
 );
