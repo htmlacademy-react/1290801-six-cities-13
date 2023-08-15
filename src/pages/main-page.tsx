@@ -8,6 +8,7 @@ import OfferCard from '../components/offer-card/offer-card';
 import Header from '../components/header/header';
 import NotFoundPage from './not-found-page/not-found-page';
 import {TOfferForList} from '../types/offer-for-list';
+import Map from '../components/map/map';
 
 type MainPageProps = {
 	offers: TOfferForList[];
@@ -54,8 +55,6 @@ function MainPage({offers}: MainPageProps): JSX.Element {
 							<section className="cities__places places">
 								<h2 className="visually-hidden">Places</h2>
 								<b className="places__found">{currentOffers.length} places to stay in {(currentCity[0].toUpperCase() + currentCity.slice(1))}</b>
-								{/*////добавил на время, пока не подключена карта, чтобы использовалась переменная состояния*/}
-								<span className="places__sorting-type">{activeOffer ? `активный оффер: ${activeOffer.title}` : 'сейчас нет активного оффера'}</span>
 								<form className="places__sorting" action="#" method="get">
 									<span className="places__sorting-caption">Sort by</span>{' '}
 									<span className="places__sorting-type" tabIndex={0}>
@@ -88,9 +87,9 @@ function MainPage({offers}: MainPageProps): JSX.Element {
 
 								</div>
 							</section>
-							<div className="cities__right-section">
-								<section className="cities__map map"/>
-							</div>
+
+							<Map className="cities__map map" selectedPoint={(activeOffer && activeOffer.id) || ''} points={currentOffers} city={currentOffers[0].city} />
+
 						</div>
 					</div>
 				</main>
