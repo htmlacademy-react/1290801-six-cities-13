@@ -9,6 +9,7 @@ import Header from '../components/header/header';
 import NotFoundPage from './not-found-page/not-found-page';
 import {TOfferForList} from '../types/offer-for-list';
 import Map from '../components/map/map';
+import {OFFER_CARD_TYPES} from '../consts';
 
 type MainPageProps = {
 	offers: TOfferForList[];
@@ -83,12 +84,12 @@ function MainPage({offers}: MainPageProps): JSX.Element {
 								</form>
 								<div className="cities__places-list places__list tabs__content">
 
-									{currentOffers.map((offer) => <OfferCard offer={offer} key={offer.id} onMouseEnter={() => handleActiveOfferChange(offer)} onMouseLeave={() => handleActiveOfferChange(undefined)}/>)}
+									{currentOffers.map((offer) => <OfferCard offer={offer} key={offer.id} cardType={OFFER_CARD_TYPES.Main} onMouseEnter={() => handleActiveOfferChange(offer)} onMouseLeave={() => handleActiveOfferChange(undefined)}/>)}
 
 								</div>
 							</section>
 
-							<Map className="cities__map map" selectedPoint={(activeOffer && activeOffer.id) || ''} points={currentOffers} city={currentOffers[0].city} />
+							<Map className="cities__map map" selectedPoint={(activeOffer && activeOffer.id) || ''} points={currentOffers} city={currentOffers[0].city} isOfferPage={false} />
 
 						</div>
 					</div>
