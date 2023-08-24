@@ -6,7 +6,11 @@ import {reviewsMock} from '../../mocks/reviews';
 
 const reviews = reviewsMock;
 
-function ReviewsList(): JSX.Element {
+type ReviewProps = {
+	isLogged: boolean;
+}
+
+function ReviewsList({isLogged}: ReviewProps): JSX.Element {
 	return (
 		<section className="offer__reviews reviews">
 			<h2 className="reviews__title">
@@ -17,7 +21,7 @@ function ReviewsList(): JSX.Element {
 					<ReviewsItem key={review.id} review={review}/>
 				))}
 			</ul>
-			<OfferForm />
+			{isLogged && (<OfferForm />)}
 		</section>
 	);
 }

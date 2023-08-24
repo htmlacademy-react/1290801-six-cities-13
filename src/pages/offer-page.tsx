@@ -7,7 +7,6 @@ import React from 'react';
 import NotFoundPage from './not-found-page/not-found-page';
 import FavoriteButtonBig from '../components/favorite-button/favorite-button-big';
 import classNames from 'classnames';
-import OfferForm from '../components/offer-form/offer-form';
 import Map from '../components/map/map';
 import OfferCard from '../components/offer-card/offer-card';
 import {OFFER_CARD_TYPES} from '../consts';
@@ -103,7 +102,7 @@ function OfferPage(): JSX.Element {
 										</p>
 									</div>
 								</div>
-								<ReviewsList />
+								<ReviewsList isLogged/>
 							</div>
 						</div>
 						<section className="offer__map map">

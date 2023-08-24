@@ -47,3 +47,5 @@ export const reviewsMock: TReview[] = [
 		}
 	}
 ];
+
+// export const reviewsMock: TReview[] = []

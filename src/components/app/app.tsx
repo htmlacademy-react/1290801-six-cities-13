@@ -24,14 +24,13 @@ function App({offers}: AppProps): JSX.Element {
 					<Route path={AppRoute.Login} element={<LoginPage/>}/>
 					<Route
 						path={AppRoute.Favorites}
-						// element={<FavoritesPage />}
 						element={
 							<PrivateRoute authorizationStatus={AuthorizationStatus.Auth}>
 								<FavoritesPage favoritesOffers={offers.filter((offer) => offer.isFavorite)}/>
 							</PrivateRoute>
 						}
 					/>
-					<Route path={`${AppRoute.Offer}/:id`} element={<OfferPage />}/>
+					<Route path={`${AppRoute.Offer}/:id`} element={<OfferPage isLogged={false}/>}/>
 					<Route path='*' element={<NotFoundPage/>}/>
 				</Routes>
 			</BrowserRouter>
