@@ -3,13 +3,14 @@ import useMap from '../../hooks/use-map';
 import 'leaflet/dist/leaflet.css';
 import {URL_MARKER_CURRENT, URL_MARKER_DEFAULT} from '../../consts';
 import {TOfferForList} from '../../types/offer-for-list';
-import {City} from '../../types/offer';
+import {City, TOffer} from '../../types/offer';
 import {useEffect, useRef} from 'react';
 
 type MapProps = {
 	city: City;
-	points: TOfferForList[];
+	points: (TOfferForList | TOffer)[];
 	selectedPoint: string;
+	isOfferPage: boolean;
 };
 
 const defaultCustomIcon = new Icon({
@@ -25,7 +26,7 @@ const currentCustomIcon = new Icon({
 });
 
 function Map(props: MapProps): JSX.Element {
-	const {city, points, selectedPoint} = props;
+	const {city, points, selectedPoint, isOfferPage} = props;
 
 	const mapRef = useRef(null);
 	const map = useMap(mapRef, city);
@@ -54,8 +55,10 @@ function Map(props: MapProps): JSX.Element {
 		}
 	}, [map, points, selectedPoint]);
 
+	if (isOfferPage) {
+		return <div className="offer__map map" style={{margin: 'auto', width: '80%'}} ref={mapRef}></div>;
+	}
 	return <div className="cities__right-section" style={{width: '500px'}} ref={mapRef}></div>;
-	// return <h2>Map Map</h2>;
 }
 
 export default Map;

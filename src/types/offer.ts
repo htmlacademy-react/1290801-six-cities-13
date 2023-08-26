@@ -32,3 +32,17 @@ export type Host = {
 	avatarUrl: string;
 	isPro: boolean;
 }
+
+export type TAdditionalProp = {
+	cardStyle: string;
+	cardInfo: string;
+	imageWrapperStyle: string;
+	imgWidth: number;
+	imgHeight: number;
+}
+
+export type TAdditionalProps = {
+	Main: TAdditionalProp;
+	Favorites: TAdditionalProp;
+	Near: TAdditionalProp;
+}

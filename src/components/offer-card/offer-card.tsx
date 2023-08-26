@@ -1,15 +1,16 @@
 import {TOfferForList} from '../../types/offer-for-list';
 import FavoriteButtonSmall from '../favorite-button/favorite-button-small';
 import {Link} from 'react-router-dom';
-import {AppRoute} from '../../consts';
+import {AppRoute, OfferCardAdditionalProps} from '../../consts';
 
 type OfferCardProps = {
 	offer: TOfferForList;
-	onMouseEnter:(offer) => void;
-	onMouseLeave:() => void;
+	cardType: 'Main' | 'Favorites' | 'Near';
+	onMouseEnter?:(offer) => void;
+	onMouseLeave?:() => void;
 }
 
-function OfferCard({offer, onMouseEnter, onMouseLeave}: OfferCardProps): JSX.Element {
+function OfferCard({offer, cardType, onMouseEnter, onMouseLeave}: OfferCardProps): JSX.Element {
 	const {
 		id,
 		title,
@@ -22,24 +23,34 @@ function OfferCard({offer, onMouseEnter, onMouseLeave}: OfferCardProps): JSX.Ele
 		rating,
 		previewImage
 	} = offer;
+	const additionalProps = OfferCardAdditionalProps[cardType];
+
 	return (
-		<article className="cities__card place-card" onMouseEnter={() => (onMouseEnter(offer))} onMouseLeave={onMouseLeave}>
-			<div className="cities__image-wrapper place-card__image-wrapper">
-				{isPremium && (
-					<div className="place-card__mark">
-						<span>Premium</span>
-					</div>)}
+		<article
+			className={`place-card${additionalProps.cardStyle}`}
+			onMouseEnter={() => (onMouseEnter ? onMouseEnter(offer) : '')}
+			onMouseLeave={onMouseLeave}
+		>
+			{isPremium && (
+				<div className="place-card__mark">
+					<span>Premium</span>
+				</div>)}
+			<div
+				className={`place-card__image-wrapper${additionalProps.imageWrapperStyle}`}
+			>
 				<Link to={`${AppRoute.Offer}/${id}`}>
 					<img
 						className="place-card__image"
 						src={previewImage}
-						width={260}
-						height={200}
+						width={additionalProps.imgWidth}
+						height={additionalProps.imgHeight}
 						alt="Place image"
 					/>
 				</Link>
 			</div>
-			<div className="place-card__info">
+			<div
+				className={`place-card__info${additionalProps.cardInfo}`}
+			>
 				<div className="place-card__price-wrapper">
 					<div className="place-card__price">
 						<b className="place-card__price-value">€{price}</b>{' '}

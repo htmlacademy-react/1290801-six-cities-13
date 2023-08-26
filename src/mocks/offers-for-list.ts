@@ -20,7 +20,7 @@ export const offersForListMock: TOfferForList[] = [
 			'longitude': 2.342499,
 			'zoom': 16
 		},
-		'isFavorite': true,
+		'isFavorite': false,
 		'isPremium': false,
 		'rating': 5
 	},
@@ -250,31 +250,8 @@ export const offersForListMock: TOfferForList[] = [
 			'longitude': 9.976654000000002,
 			'zoom': 16
 		},
-		'isFavorite': true,
+		'isFavorite': false,
 		'isPremium': true,
 		'rating': 2.2
 	},
-	{
-		'id': '19a32517-6248-4a06-8d20-3ce649e249e6',
-		'title': 'Beautiful & luxurious apartment at great location',
-		'type': 'apartment',
-		'price': 129,
-		'previewImage': 'https://13.design.pages.academy/static/hotel/4.jpg',
-		'city': {
-			'name': 'Dusseldorf',
-			'location': {
-				'latitude': 51.225402,
-				'longitude': 6.776314,
-				'zoom': 13
-			}
-		},
-		'location': {
-			'latitude': 51.210402,
-			'longitude': 6.798314,
-			'zoom': 16
-		},
-		'isFavorite': true,
-		'isPremium': false,
-		'rating': 4.4
-	}
 ];
